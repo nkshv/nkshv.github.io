@@ -294,7 +294,7 @@ def generate_ufc_database(url):
 
 
 def export_to_csv():
-    header1 = ['Fighter', 'Elo', 'UFC Record', 'Unbeaten Streak', 'Avg. Opp. Elo', 'Last 5 Fights', 'DelME', 'DelME1', 'DelME2', 'DelME3']
+    header1 = ['Fighter', 'Elo', 'UFC Record', 'Unbeaten Streak', 'Last 5 Fights', 'DelME', 'DelME1', 'DelME2', 'DelME3']
     header2 = ['Fighter', 'Peak Elo', 'Year Achieved', 'UFC Record', 'Avg. Opp. Elo']
     generate_elo()
     results1 = sorted_dictionary
@@ -312,7 +312,7 @@ def export_to_csv():
         writer.writerow(header1)
         writer.writerow(("place holder", 0, 0, 0))
         for keys, value in res1.items():
-            writer.writerow((keys, f"{value:.3f}", f"{number_of_wins[keys]}-{number_of_losses[keys]}-{number_of_draws[keys]}", unbeaten_streak[keys], f"{strenght_of_schedule[keys]:.3f}", f"{last_5_fights[keys][-1]}", f"{last_5_fights[keys][-2]}", f"{last_5_fights[keys][-3]}", f"{last_5_fights[keys][-4]}", f"{last_5_fights[keys][-5]}"))
+            writer.writerow((keys, f"{value:.3f}", f"{number_of_wins[keys]}-{number_of_losses[keys]}-{number_of_draws[keys]}", unbeaten_streak[keys], f"{last_5_fights[keys][-1]}", f"{last_5_fights[keys][-2]}", f"{last_5_fights[keys][-3]}", f"{last_5_fights[keys][-4]}", f"{last_5_fights[keys][-5]}"))
         f.close()
     file_name2 = str(date.today()) + "-peak_elo.csv"
     with open(file_name2, "w") as f:
