@@ -11,6 +11,7 @@ current skills anymore. Conversely, because it only takes into account fights th
 are underrated giving their lack of experience inside the UFC octagon.
 
 # How it works
+
 The program was made using Python, and the data was web scrapped from the ufcstats website using BeautifulSoup. It generates a simple html file containg
 a table with every fighter that has ever fought in the UFC and their ratings. The website is updated weekly, on Sundays.
 The starting value is 100 and K-factor (factor of change) is equal to 32.

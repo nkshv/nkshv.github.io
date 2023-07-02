@@ -258,8 +258,8 @@ def generate_ufc_database(url):
     stats = soup.find_all('p', class_="b-fight-details__table-text")
     for i in stats:
         element = i.text.strip()
-        weight_classes = ("Women's Strawweight","Women's Flyweight", "Women's Bantamweight", "Women's Featherweight", "Flyweight", "Bantamweight", "Featherweight", "Lightweight", "Welterweight", "Middleweight", "Light Heavyweight", "Heavyweight", "Catch Weight", "Open Weight")
-        method = ("KO/TKO", "SUB", "U-DEC", "S-DEC", "M-DEC", "DQ", "Overturned", "CNC", )
+        weight_classes = ("Women's Strawweight","Women's Flyweight", "Women's Bantamweight", "Women's Featherweight", "Flyweight", "Bantamweight", "Featherweight", "Lightweight", "Welterweight", "Middleweight", "Light Heavyweight", "Heavyweight", "Catch Weight", "Open Weight", "Super Heavyweight")
+        method = ("KO/TKO", "SUB", "U-DEC", "S-DEC", "M-DEC", "DQ", "Overturned", "CNC", "Other")
         if element in weight_classes:
             db_weight_class.append(element)
         elif element in method:
